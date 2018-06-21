@@ -1,0 +1,53 @@
+#optionList{
+  margin-right: 2%;
+  background-color: #858f4c;
+  color: aliceblue;
+}
+
+#mainNav{
+  padding-right: 7%;
+  background-color: #371d5d;
+}
+
+.nav-link{
+  color: aliceblue;
+
+}
+
+#loginLink{
+  color: aliceblue;
+}
+
+#all-users, #all-articles, #all-posts{
+  background-color: #371d5d;
+  color: #858f4c;
+}
+
+
+#mainContArea{
+  border: #371d5d;
+  border-width: 2% ;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  /* border-bottom: none; */
+}
+
+#agree{
+  background-color: #371d5d;
+  color: #858f4c;
+}
+
+.burger{
+  
+  height: 100px;
+  width: 300px;
+  padding: 3%;
+  background-image: url('/images/bloggerEdit.PNG');
+  background-position: top left;
+  background-size: 300px 100px;
+
+  background-repeat: no-repeat;
+  /*background-color: #6d6a5c;*/  
+}
+/* #858f4c */

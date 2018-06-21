@@ -1,0 +1,68 @@
+<div class="container">
+
+  <h1>Admin Page</h1>
+
+  <p>Entering the id's of article or posts will delete them. Entering a user's id will ban them.</p>
+  <div class="row">
+
+    <div class="col-md-6" id="delete-post-article">
+      
+      <form>
+
+        <div class="form-group">
+
+          <label for="content-id">Enter the Article or Posts Content ID</label>
+          <input type="number" class="form-control" id="content-id">
+          <br>
+          <button class="btn btn-warning" id="delete">Delete</button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+    <div class="col-md-6" id="ban-user">
+
+      <form>
+
+        <div class="form-group">
+
+          <label for="user-id">Enter the User's ID that you wish to ban.</label>
+          <input type="number" class="form-control" id="user-id">
+          <br>
+          <button class="btn btn-warning" id="ban">Ban User</button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="response"></div>
+
+  <hr>
+
+  <div class="row">
+
+    <div>
+
+      <button class="btn btn-primary" id="all-articles">Get all Articles</button>
+
+      <button class="btn btn-primary" id="all-users">Get all Users</button>
+
+      <button class="btn btn-primary" id="all-posts">Get all Posts</button>
+
+      <br><br>
+      
+      <div class="display"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="./js/jsn.js"></script>

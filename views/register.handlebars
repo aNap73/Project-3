@@ -1,0 +1,25 @@
+
+<script src="/../js/antJs.js"></script>
+<div class="container">
+  
+<H1>Register</H1>
+{{#if regInit}}
+<p>Email:</p><input type="text" id="email" name="email">
+<p>Password:</p><input type="password" id="password" name="password">
+<p>Confirm Password:</p><input type="password" id="password2" name="password2">
+<button type="submit" id="register" name="register" onclick="antJs.register()">GO</button>
+{{/if}}
+{{#if regSuccess}}
+<h2>Success</h2>
+<a href="/">Please wait for an email to complete your registration!</a>
+{{/if}}
+<p class="warn" id="regErr" style="display:node"></p>
+{{#if regFail}}
+<h2>Your Request Failed</h2>
+{{#if regFoundUser}}
+<a href="/login">Please log in with your email address, or reset your password. You have an account already.</a>
+{{else}}
+<a href="/register">Click Here to Try Again</a>
+{{/if}}
+{{/if}}
+</div>

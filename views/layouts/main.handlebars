@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GAMER BLOGGER</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  
+  
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expa nd-lg" id="mainNav">
+    <div class="navbar-brand burger" > </div>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      
+    </div>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+    </ul>
+      
+      {{!-- this has to be the name of the item within the object --}}
+      {{#if userObj}}        
+        <a class="nav-link" href="/">Welcome! {{userObj.email}}</a>     
+      {{else}}  
+        <a id="loginLink"  href='/login'>Log In!</a>
+        <a id="regLink"  href='/register'>Register!</a>
+      {{/if}}      
+    </div>
+    <div class="dropdown open">
+       {{#if userObj}}
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="optionList" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        Options
+      </button>
+       {{/if}}
+      <div class="dropdown-menu">
+        
+        <a class="dropdown-item" href="/logout">Log Out</a>          
+        <a class="dropdown-item" href="https://github.com/aNap73/Project-2/blob/master/README.md">About</a>
+        {{#if userObj}}
+        {{#if userObj.hasAdmin}}
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/postArticle">Add Article</a>
+        <a class="dropdown-item" href="/admin">Admin Page</a>
+        
+        {{/if}}
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+  {{{ body }}}
+  
+  
+  
+</body>
+
+</html>
