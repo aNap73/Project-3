@@ -1,23 +1,24 @@
 {
-  "name": "Project-2",
+  "name": "Project-3",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
+    "client": "cd oglite && npm start",
+    "server": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aNap73/Project-2.git"
+    "url": "git+https://github.com/aNap73/Project-3.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aNap73/Project-2/issues"
+    "url": "https://github.com/aNap73/Project-3/issues"
   },
-  "homepage": "https://github.com/aNap73/Project-2#readme",
+  "homepage": "https://github.com/aNap73/Project-3#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
@@ -33,5 +34,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^4.37.7"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }

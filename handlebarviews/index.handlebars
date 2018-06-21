@@ -1,0 +1,45 @@
+<script src="/js/vinJs.js"></script>
+<div class="container">
+  <div class="row">
+    <div class="col-7" id="mainContArea">
+
+
+      <ul>
+        {{#each articles}}
+        {{#each mainArticle}}
+        <li><h3>{{contentTitle}}</h3></li>
+          <p>{{contentText}}</p>          
+        {{/each}}
+        {{/each}}
+      </ul>
+
+
+    </div>
+    <div id="commentSectionMain" class="col-4">
+      {{#if userObj}}
+      <form class="commentForm">
+        <div class="form-group">
+          <h2>Post a comment</h2>
+          <textarea class="form-control" id="comment" rows="3"></textarea>
+        </div>
+        <button type="submit" aria-label="this is a test button">Submit</button>
+      </form>
+      {{/if}}
+      <H3>Comments</h3>
+      <div class="col-12" id="commentSection">
+        <ul id="comments">
+        {{#each commentsObj}}
+        {{#each commentsNum}}
+        <li>{{contentText}}-{{user.email}}<p>{{createdAt}}</p></li>
+        {{/each}}
+        {{/each}}
+      </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+
